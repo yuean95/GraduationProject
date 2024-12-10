@@ -10,8 +10,7 @@ def noise_reduction(audio_path, output_path, noise_reduction_factor=0.5, plot=Fa
         1.原始音頻 轉成 STFT：把音頻分解成時間和頻率的矩陣。
         2.幅值與相位分解：從複數提取幅值和相位。
         3.門檻去噪：設個門檻，低於門檻的頻率就去掉。
-        4.反STFT：轉回時域。
-    
+        4.反STFT：把數據轉回時域。
     
     參數:
     - audio_path: 輸入音訊檔案的路徑 (支持 MP3, WAV等)
