@@ -18,7 +18,7 @@ def turn_MFCC(audio_path, output_path, plot=False):
     # 讀取音訊檔案，y:音頻時間序列，sr:音頻採樣率(默認22050，None則採用原檔採樣率)
     y, sr = librosa.load(file_path)
     
-    # 計算MFCCs
+    # 計算MFCCs，n_mfcc是返回的MFCC數量
     mfccs = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=13)
     
     # 繪製圖形
