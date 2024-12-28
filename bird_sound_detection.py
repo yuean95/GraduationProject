@@ -55,7 +55,7 @@ model = Sequential([
     Dense(labels.shape[1], activation='softmax')  # 輸出層，根據類別數進行分類，採softmax激活函數
 ])
 
-# 編譯模型，優化器用adam，損失函數用categorical_crossentropy，根據準確率做指標
+# 編譯模型，優化器用adam，損失函數用多類別交叉熵(categorical_crossentropy)，指標為準確率
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
 # 訓練模型，10個訓練週期
