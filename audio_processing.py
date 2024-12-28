@@ -49,7 +49,7 @@ def audio_processing(audio_path, output_mel_path, target_length, noise_reduction
     plt.figure(figsize=(10, 6))
     librosa.display.specshow(mel_spec_db, x_axis='time', y_axis='mel', sr=sr, hop_length=512, cmap='viridis')
     plt.axis('off')
-    plt.savefig(output_mel_path)
+    plt.savefig(output_mel_path, bbox_inches='tight', pad_inches=0)
 
 # 測試函數
 if __name__ == "__main__":
